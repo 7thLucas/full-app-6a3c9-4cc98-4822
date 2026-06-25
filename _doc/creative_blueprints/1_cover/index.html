@@ -1,39 +1,56 @@
 <style>
-  .mode-landscape .sl-cover-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-image-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-cover-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { flex: 1; display: flex; flex-direction: column; justify-content: center; padding-bottom: 1.5rem; }
-  .mode-portrait .sl-image-panel { min-height: 280px; flex-shrink: 0; }
+.mode-landscape .sl-layout { flex-direction: row; }
+.mode-portrait .sl-layout { flex-direction: column; }
+.mode-landscape .sl-left { width: 52%; }
+.mode-landscape .sl-right { width: 48%; }
+.mode-portrait .sl-left { width: 100%; flex: 1; }
+.mode-portrait .sl-right { width: 100%; height: 38%; }
 </style>
-<section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-cover-layout h-full">
-    <div class="sl-content-panel px-10 py-12">
-      <div class="flex flex-col justify-between h-full">
-        <div>
-          <p class="text-sm font-medium tracking-widest uppercase mb-6" style="color:#7c3aed;">Student</p>
-          <h1 class="text-5xl font-bold text-slate-900 leading-tight mb-6">FocusFlow: Master Your Learning</h1>
-          <p class="text-xl text-slate-600 leading-relaxed max-w-md mb-6">AI-powered study companion combining proven learning techniques, gamification, and community challenges to transform how students study and retain information.</p>
-          <div class="inline-flex items-center gap-3 border rounded-lg px-4 py-3" style="background-color:#a78bfa; border-color:#7c3aed40;">
-            <div class="w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0" style="background-color:#7c3aed;">
-              <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/>
-              </svg>
-            </div>
-            <span class="text-sm font-medium px-1" style="color:#ffffff;">Core vision: Simplified productivity</span>
 
-          </div>
-        </div>
-        <div class="mt-auto pt-8">
-          <data-attribution />
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="sl-layout flex w-full h-full">
+
+    <!-- Left: Content Panel -->
+    <div class="sl-left flex flex-col justify-between p-12" style="background: linear-gradient(148deg, #1e0a3c 0%, #3b0764 30%, #5b21b6 68%, #7c3aed 100%);">
+
+      <!-- Badge -->
+      <div>
+        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-semibold border border-purple-400 text-purple-200 tracking-wide" style="background: rgba(88,28,135,0.5);">
+          🎓 Education &amp; Productivity · PWA
+        </span>
+      </div>
+
+      <!-- Headline + Tagline -->
+      <div>
+        <h1 class="text-5xl font-black text-white leading-none tracking-tight mb-5">
+          Study Smarter.<br>Focus Deeper.<br>Rise Higher.
+        </h1>
+        <p class="text-purple-200 text-sm leading-relaxed" style="max-width: 290px;">
+          Science-backed study techniques, an AI coach, and community momentum — in one competition-ready app.
+        </p>
+        <div class="flex gap-2 mt-6 flex-wrap">
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium text-purple-200 border border-purple-600" style="background: rgba(109,40,217,0.35);">Feynman Method</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium text-purple-200 border border-purple-600" style="background: rgba(109,40,217,0.35);">Spaced Repetition</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium text-purple-200 border border-purple-600" style="background: rgba(109,40,217,0.35);">AI Coach</span>
+          <span class="px-2.5 py-1 rounded-full text-xs font-medium text-purple-200 border border-purple-600" style="background: rgba(109,40,217,0.35);">Focus Arena</span>
         </div>
       </div>
-    </div>
-    <div class="sl-image-panel relative overflow-hidden">
-      <div class="absolute inset-0" style="background:linear-gradient(135deg, #7c3aed, #7c3aed20);"></div>
-      <div class="absolute inset-0 flex items-center justify-center p-8">
-        <img src="http://qb-be-deck.quantumbyte:9999/common/image-generation?prompt=student+studying+with+focused+expression+purple+ambient+light+modern+minimalist+setting&amp;keyspace=a1rflu5e&amp;user_id=4822" alt="cover" class="max-w-full max-h-full object-contain drop-shadow-2xl rounded-2xl" />
+
+      <!-- Attribution -->
+      <div>
+        <data-attribution />
       </div>
     </div>
+
+    <!-- Right: Visual -->
+    <div class="sl-right relative overflow-hidden">
+      <img
+        src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=A%20focused%20university%20student%20studying%20at%20a%20sleek%20modern%20desk%20bathed%20in%20deep%20purple%20ambient%20light%2C%20glowing%20analytics%20dashboard%20visible%20on%20screen%2C%20minimalist%20workspace%2C%20calm%20and%20productive%20atmosphere%2C%20editorial%20photography%20style%2C%20cinematic%20lighting"
+        class="w-full h-full object-cover"
+        alt="Focused student in a purple-lit study environment"
+      />
+      <div class="absolute inset-0" style="background: linear-gradient(to right, rgba(91,33,182,0.45) 0%, transparent 50%);"></div>
+    </div>
+
   </div>
 </section>

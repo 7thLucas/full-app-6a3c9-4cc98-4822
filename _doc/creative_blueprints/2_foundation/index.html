@@ -1,40 +1,87 @@
 <style>
-  .mode-landscape .sl-foundation-layout { display: flex; flex-direction: row; align-items: stretch; min-height: 100%; }
-  .mode-landscape .sl-content-panel { width: 55%; padding: 3rem; display: flex; flex-direction: column; justify-content: center; }
-  .mode-landscape .sl-visual-panel { width: 45%; min-height: 0; }
-  .mode-portrait .sl-foundation-layout { display: flex; flex-direction: column; min-height: 100%; }
-  .mode-portrait .sl-content-panel { padding: 2rem 1.5rem; }
-  .mode-portrait .sl-visual-panel { min-height: 280px; }
+.mode-landscape .sl-main { flex-direction: row; }
+.mode-portrait .sl-main { flex-direction: column; }
+.mode-landscape .sl-zones { width: 58%; }
+.mode-landscape .sl-visual { width: 42%; }
+.mode-portrait .sl-zones { width: 100%; flex: 1; }
+.mode-portrait .sl-visual { width: 100%; height: 30%; }
+.mode-landscape .sl-zones-inner { flex-direction: column; }
+.mode-portrait .sl-zones-inner { flex-direction: row; }
 </style>
-<section class="w-full h-full overflow-auto bg-white">
-  <div class="sl-foundation-layout">
-    <div class="sl-content-panel">
-      <div class="flex items-center justify-between mb-4">
-        <span class="inline-block text-xs font-semibold tracking-widest uppercase" style="color:#7c3aed;">Foundation</span>
-        <span class="inline-flex items-center gap-1.5 px-2.5 py-1 border rounded-full" style="background-color:#7c3aed; border-color:#7c3aed30;">
-          <span class="text-xs font-semibold" style="color:#ffffff;">Validated</span>
 
-        </span>
-      </div>
-      <h1 class="text-3xl font-bold text-slate-900 leading-tight mb-8">Students struggle with focus, retention, and motivation while studying</h1>
-      <div class="space-y-5">
-        <div class="border-l-4 pl-4 relative" style="border-color:#F43F5E;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#E11D48;">The Problem</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Students face three critical challenges: maintaining focus during study sessions, retaining information effectively, and staying motivated through long-term learning goals. Current study tools lack personalization, scientific grounding, and social engagement.</p>
-        </div>
-        <div class="border-l-4 pl-4 relative" style="border-color:#7c3aed;">
-          <h2 class="text-sm font-semibold uppercase tracking-wide mb-1" style="color:#7c3aed;">The Solution</h2>
-          <p class="text-slate-700 leading-relaxed text-sm">Traditional study methods lack structure, real-time feedback, and motivation mechanisms. Students often procrastinate, lose focus, and fail to measure their learning progress. Without scientifically-backed techniques and community support, studying feels isolating and ineffective.</p>
-        </div>
-        <div class="border-l-4 border-sky-500 pl-4 relative"><h2 class="text-sm font-semibold text-sky-600 uppercase tracking-wide mb-1">Target Audience</h2><p class="text-slate-700 leading-relaxed text-sm">High school and undergraduate students seeking better study habits and academic performance</p></div>
-        <div class="border-l-4 border-amber-500 pl-4 relative"><h2 class="text-sm font-semibold text-amber-600 uppercase tracking-wide mb-1">Personal Motivation</h2><p class="text-slate-700 leading-relaxed text-sm">Democratize access to elite study methods and create a supportive community where learning becomes rewarding</p></div>
-      </div>
-      <div class="mt-6 flex flex-wrap gap-2"><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">EdTech</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Productivity</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Learning Science</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">Gamification</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">AI Coach</span><span class="px-3 py-1 bg-slate-100 text-slate-600 text-xs font-medium rounded-full">PWA</span></div>
-      <div class="mt-8"><data-attribution /></div>
+<section class="w-full h-full overflow-auto bg-white">
+  <div class="flex flex-col w-full h-full">
+
+    <!-- Header Band -->
+    <div class="flex-shrink-0 flex items-center gap-3 px-10 py-4" style="background: linear-gradient(90deg, #2e1065, #6d28d9);">
+      <div class="w-1 h-7 rounded-full bg-purple-300 flex-shrink-0"></div>
+      <h2 class="text-xl font-black text-white tracking-tight">The Focus Crisis in Modern Learning</h2>
     </div>
-    <div class="sl-visual-panel relative">
-      <img src="http://qb-be-deck.quantumbyte:9999/common/image-generation?prompt=frustrated+student+at+desk+scattered+notes+distractions+unfocused&amp;keyspace=a1rflu5e&amp;user_id=4822" alt="visual" class="w-full h-full object-cover" />
-      <div class="absolute inset-0 bg-gradient-to-r from-white via-transparent to-transparent opacity-40"></div>
+
+    <!-- Main Body -->
+    <div class="sl-main flex flex-1 min-h-0">
+
+      <!-- Left: Problem + Solution stacked -->
+      <div class="sl-zones flex min-h-0">
+        <div class="sl-zones-inner flex w-full h-full">
+
+          <!-- Problem Zone -->
+          <div class="flex-1 flex flex-col p-8 border-b border-r border-slate-100" style="background: #fff7f7;">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-7 h-7 rounded-lg flex items-center justify-center text-sm" style="background: #fee2e2;">⚠️</div>
+              <span class="text-xs font-bold text-rose-600 uppercase tracking-widest">The Problem</span>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex gap-2.5 items-start">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-rose-400 flex-shrink-0"></span>
+                <p class="text-xs text-slate-700 leading-snug"><strong class="text-slate-900">Passive habits produce poor retention</strong> — re-reading and highlighting consistently underperform evidence-based methods in learning research.</p>
+              </li>
+              <li class="flex gap-2.5 items-start">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-rose-400 flex-shrink-0"></span>
+                <p class="text-xs text-slate-700 leading-snug"><strong class="text-slate-900">Tool fragmentation breaks routines</strong> — scattered timers, flashcard apps, and note tools prevent any coherent study system from forming.</p>
+              </li>
+              <li class="flex gap-2.5 items-start">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-rose-400 flex-shrink-0"></span>
+                <p class="text-xs text-slate-700 leading-snug"><strong class="text-slate-900">Motivation collapses without accountability</strong> — no streaks, community, or visible progress means students quit before habits take hold.</p>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Solution Zone -->
+          <div class="flex-1 flex flex-col p-8 border-r border-slate-100" style="background: #f5f3ff;">
+            <div class="flex items-center gap-2 mb-4">
+              <div class="w-7 h-7 rounded-lg flex items-center justify-center text-sm" style="background: #ede9fe;">✨</div>
+              <span class="text-xs font-bold text-purple-700 uppercase tracking-widest">The Solution</span>
+            </div>
+            <ul class="space-y-3">
+              <li class="flex gap-2.5 items-start">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0"></span>
+                <p class="text-xs text-slate-700 leading-snug"><strong class="text-slate-900">Four evidence-based techniques, one platform</strong> — Feynman, spaced repetition, active recall, and Pomodoro, unified in a single coherent experience.</p>
+              </li>
+              <li class="flex gap-2.5 items-start">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0"></span>
+                <p class="text-xs text-slate-700 leading-snug"><strong class="text-slate-900">AI coach adapts in real time</strong> — recommends the optimal technique for each task, eliminating guesswork about how to study.</p>
+              </li>
+              <li class="flex gap-2.5 items-start">
+                <span class="mt-1.5 w-1.5 h-1.5 rounded-full bg-purple-500 flex-shrink-0"></span>
+                <p class="text-xs text-slate-700 leading-snug"><strong class="text-slate-900">Gamified community sustains momentum</strong> — streaks, leagues, and leaderboards create the accountability loop that keeps students coming back.</p>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Supporting Visual -->
+      <div class="sl-visual relative overflow-hidden">
+        <img
+          src="https://api.qb-deck.quantumbyte.ai/common/image-generation?prompt=Split%20editorial%20concept%3A%20top%20half%20shows%20a%20chaotic%20cluttered%20desk%20with%20scattered%20papers%20and%20an%20overwhelmed%20student%20in%20cool%20grey%20tones%3B%20bottom%20half%20shows%20a%20serene%20minimalist%20digital%20workspace%20glowing%20in%20soft%20purple%20light%20with%20clean%20analytics%20on%20screen%2C%20editorial%20photography%20style"
+          class="w-full h-full object-cover"
+          alt="Problem vs solution visual"
+        />
+        <div class="absolute inset-0" style="background: linear-gradient(to left, transparent 40%, rgba(245,243,255,0.25));"></div>
+      </div>
+
     </div>
   </div>
 </section>
